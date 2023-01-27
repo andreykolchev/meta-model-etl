@@ -1,0 +1,56 @@
+{
+  "name": "AGREEMENT",
+  "mainTable": "AGREEMENT",
+  "tables": [
+    {
+      "name": "AGREEMENT",
+      "key": "AGREEMENTID",
+      "binding": "",
+      "parameters": {
+        "type": "json",
+        "resource": "/home/user/IdeaProject/ddd/metaModel/src/main/resources/data/agreement.json"
+      },
+      "fields": [
+        {
+          "name": "AGREEMENTID",
+          "type": "INTEGER"
+        },
+        {
+          "name": "AGREEMENTDATE",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "AGREEMENTDESCROPTION",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "PARTYCODE",
+          "type": "VARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "PARTY",
+      "key": "PARTY_KEY",
+      "binding": "DIM_AGREEMENT.PARTYCODE = DIM_PARTY.PARTY_CODE",
+      "parameters": {
+        "type": "csv",
+        "resource": "/home/user/IdeaProject/ddd/metaModel/src/main/resources/data/parties.csv"
+      },
+      "fields": [
+        {
+          "name": "PARTY_KEY",
+          "type": "INTEGER"
+        },
+        {
+          "name": "PARTY_CODE",
+          "type": "VARCHAR"
+        },
+        {
+          "name": "PARTY_NAME",
+          "type": "VARCHAR"
+        }
+      ]
+    }
+  ]
+}

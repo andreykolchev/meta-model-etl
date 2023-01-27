@@ -1,0 +1,52 @@
+# curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{
+#
+#   "attributes": [
+#
+#     "AGREEMENT.AGREEMENT_ID AS ID",
+#
+#     "AGREEMENT.AGREEMENT_DATE AS DATE",
+#
+#     "AGREEMENT.AGREEMENT_DESCRIPTION AS DESCRIPTION",
+#
+#     "PARTY.COUNTERPARTY_CODE AS PARTY_CODE",
+#
+#     "PARTY.COUNTERPARTY_NAME AS PARTY_NAME",
+#
+#     "PARTY_ACCOUNT.ACCOUNT_SHORT_NAME AS PARTY_ACCOUNT",
+#
+#     "COUNTERPARTY.COUNTERPARTY_CODE AS COUNTERPARTY_CODE",
+#
+#     "COUNTERPARTY.COUNTERPARTY_NAME AS COUNTERPARTY_NAME",
+#
+#     "COUNTERPARTY_ACCOUNT.ACCOUNT_SHORT_NAME AS COUNTERPARTY_ACCOUNT"
+#
+#   ]
+#
+# }' 'http://localhost:8080/data/buildDataSet'
+POST http://localhost:8080/data/buildDataSet
+Accept: application/json
+Content-Type: application/json
+
+{
+  "attributes": [
+    "AGREEMENT.AGREEMENT_ID AS ID",
+    "AGREEMENT.AGREEMENT_DATE AS DATE",
+    "AGREEMENT.AGREEMENT_DESCRIPTION AS DESCRIPTION",
+    "PARTY.COUNTERPARTY_CODE AS PARTY_CODE",
+    "PARTY.COUNTERPARTY_NAME AS PARTY_NAME",
+    "PARTY_ACCOUNT.ACCOUNT_SHORT_NAME AS PARTY_ACCOUNT",
+    "COUNTERPARTY.COUNTERPARTY_CODE AS COUNTERPARTY_CODE",
+    "COUNTERPARTY.COUNTERPARTY_NAME AS COUNTERPARTY_NAME",
+    "COUNTERPARTY_ACCOUNT.ACCOUNT_SHORT_NAME AS COUNTERPARTY_ACCOUNT"
+  ]
+}
+
+###
+
+# curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' 'http://localhost:8080/data/buildDataSet'
+POST http://localhost:8080/data/buildDataSet
+Accept: application/json
+Content-Type: application/json
+
+###
+
